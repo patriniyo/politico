@@ -58,9 +58,10 @@ body{
 }
 .home-page__h1{
 	font-size: 4.5rem;
-	line-height: 1;
+	line-height: 1.2;
 	width: 90%;
 	text-align: center;
+	margin-top: 0;
 }
 .home-page__h2{
 	font-size: 2.5rem;
@@ -69,4 +70,36 @@ body{
 	display: block;
 	font-size: 1.5rem;
 }
-			
+.home-page-buttons{
+	width: 40%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 6rem;
+}
+.button{
+	font-weight: 400;
+	font-size: 1.5rem;
+	border-radius: 10rem;
+	border: none;
+	color:#fff;
+	display: inline-block;
+	padding: 1.4rem 6.5rem;
+}
+.button--sign-up{
+	background-image: linear-gradient(to right,#7f0414,#cc041f);
+}
+.button--sign-in{
+	background-image: linear-gradient(to right,rgba(0,46,58,1),#007369);
+}
+.button--sign-up:hover {
+	background-image: linear-gradient(to left,#7f0414,#cc041f);
+}
+.button--sign-in:hover{
+	background-image: linear-gradient(to left,rgba(0,46,58,1),#007369);
+}
+.button--sign-up:focus {
+	outline: none;
+}
+.button--sign-in:focus{
+	outline: none;
+}
