@@ -35,7 +35,7 @@ while building trust in the process through transparency.
         <div class="modal-content">
             <div class="modal-content-header">
                 <div class="modal-content-title">
-                    <h1 class="modal_h1">Modal Pop Up</h1>
+                    <h1 class="modal_h1">Sign In</h1>
                 </div>
                 <div class="modal-content-close" id="sign-in-modal-close">
                     <span class="close-button">&times;</span>
@@ -46,9 +46,42 @@ while building trust in the process through transparency.
                 <form class="form form--sign-in">
                 	<label class="form__label" for="form--sign-in-username">Username</label>
                 	<input class="form__input" placeholder="Username" type="text" name="sign-in-username" id="form--sign-in-username">
-                	<label class="form__label" for="form--sign-in-username">Password</label>
+                	<label class="form__label" for="form--sign-in-password">Password</label>
                 	<input class="form__input" placeholder="Password" type="password" name="sign-in-password" id="form--sign-in-password">
-                	<input class="form__submit button button--green" type="submit" name="sign-in-submit" id="form--sign-in-submit">
+                	<input class="form__submit button button--green" value="Sign In" type="submit" name="sign-in-submit" id="form--sign-in-submit">
+                </form>
+            </div>
+            <!-- <div class="modal-footer">
+            	<button class="button button--red button--modal">Cancel</button>
+            	<button class="button button--green button--modal button--modal--first-child">OK</button>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="modal" id="sign-up-modal">
+        <div class="modal-content">
+            <div class="modal-content-header">
+                <div class="modal-content-title">
+                    <h1 class="modal_h1">Sign Up</h1>
+                </div>
+                <div class="modal-content-close" id="sign-up-modal-close">
+                    <span class="close-button">&times;</span>
+                </div>
+            </div>
+            <div class="content-placeholder">
+                <!-- place your content here -->
+                <form class="form form--sign-up">
+                	<label class="form__label" for="form--sign-up-firstname">First Name</label>
+                	<input class="form__input" placeholder="First Name" type="text" name="sign-up-firstname" id="form--sign-up-firstname">
+                	<label class="form__label" for="form--sign-up-lastname">Last Name</label>
+                	<input class="form__input" placeholder="Last Name" type="text" name="sign-up-lastname" id="form--sign-up-lastname">
+                	<label class="form__label" for="form--sign-up-username">Username</label>
+                	<input class="form__input" placeholder="Username" type="text" name="sign-up-username" id="form--sign-up-username">
+                	<label class="form__label" for="form--sign-up-password">Password</label>
+                	<input class="form__input" placeholder="Password" type="password" name="sign-up-password" id="form--sign-up-password">
+                	<label class="form__label" for="form--sign-up-repeat-password"> Repeat Password</label>
+                	<input class="form__input" placeholder="Repeat Password" type="password" name="sign-up-repeat-password" id="form--sign-up-repeat-password">
+                	<input class="form__submit button button--green" value="Sign Up" type="submit" name="sign-up-submit" id="form--sign-up-submit">
                 </form>
             </div>
             <!-- <div class="modal-footer">

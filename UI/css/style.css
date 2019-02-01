@@ -247,6 +247,9 @@ body{
 .form--sign-in{
 	width: 38.5rem;
 }
+.form--sign-up{
+	width: 38.5rem;
+}
 .form__label{
 	display: block;
 	font-size: 1.4rem;
