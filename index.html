@@ -24,10 +24,32 @@ while building trust in the process through transparency.
 			</h2>
 			<span class="home-page__span">Lyndon B. Johnson</span>
 			<div class="home-page-buttons">
-				<button class="button button--sign-in">Sign In</button>
-				<button class="button button--sign-up">Sign Up</button>
+				<button class="button button--green" id="sign-in-button">Sign In</button>
+				<button class="button button--red" id="sign-up-button">Sign Up</button>
 		    </div>
 		</div>
 	</div>
+
+	<!-- modal -->
+	<div class="modal" id="sign-in-modal">
+        <div class="modal-content">
+            <div class="modal-content-header">
+                <div class="modal-content-title">
+                    <h1 class="modal_h1">Add Insurance</h1>
+                </div>
+                <div class="modal-content-close" id="sign-in-modal-close">
+                    <span class="close-button">&times;</span>
+                </div>
+            </div>
+            <div class="content-placeholder">
+                <!-- place your content here -->
+            </div>
+            <div class="modal-footer">
+            	<button class="button button--red button--modal">Cancel</button>
+            	<button class="button button--green button--modal button--modal--first-child">OK</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./UI/js/main.js"></script>
 </body>
 </html>
