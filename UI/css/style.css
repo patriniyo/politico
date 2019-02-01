@@ -236,3 +236,40 @@ body{
     border-top: 1px solid #e6e6e6;
     padding: .5rem;
 }
+/* form */
+.form{
+	display: flex;
+	width: 35rem;
+	flex-direction: column;
+	background-color: inherit;
+	font-family: inherit;
+}
+.form--sign-in{
+	width: 38.5rem;
+}
+.form__label{
+	display: block;
+	font-size: 1.4rem;
+	color: #42454a;
+	line-height: 1.6;
+	text-align: left;
+}
+.form__input{
+	width: 100%;
+    border: 1px solid #e6e6e6;
+    box-shadow: inset 0 0 4px #e6e6e6;
+    border-radius: 1px;
+    padding: 1rem;
+    color: #42454a;
+    font-size: 1.4rem;
+    font-family: 'Roboto',sans-serif;
+    background-color: #fefefe;
+    margin:.5rem 0;
+}
+.form__input:focus{
+	outline : none;
+}
+.form__submit{
+	margin-top: 1rem;
+	width: 100%;
+}
