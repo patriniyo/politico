@@ -276,3 +276,41 @@ body{
 	margin-top: 1rem;
 	width: 100%;
 }
+/********* LAYOUT **************/
+/* Header */
+header{
+	height:60px;
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	border:1px solid #eeeded;
+	z-index:100;
+	background-image: linear-gradient(to right,rgba(0,46,58,1),#007369);
+	color: rgba(255,255,255,.85);
+}
+/* Main Container */
+main{
+	display: flex;
+	width: 100%;
+	background-color: #fafafa;
+	justify-content: space-between;
+	padding: 2rem;
+	margin-top: 6.5rem;
+}
+/* Navigations */
+nav{
+	width: 18%;
+	min-height: 50rem;
+	border-radius: 3px;
+	background-color: #fefefe;
+	box-shadow: 0 0 .4rem rgba(0,0,0,.2);
+}
+/* content */
+section{
+	width: 80%;
+	min-height: 50rem;
+	border-radius: 3px;
+	background-color: #fefefe;
+	box-shadow: 0 0 .4rem rgba(0,0,0,.2);
+}
