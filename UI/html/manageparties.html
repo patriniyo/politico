@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="../images/fontawesome/css/all.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>Manage Parties</title>
+</head>
+<body>
+    <header>
+        <h1 class="header__h1">politico</h1>
+        <div class="header__account">
+          <button class="button button--header">Sign Out</button>
+          <img class="header__img" src="../images/profile.jpg">
+        </div>
+    </header>
+    <main>
+        <nav>
+            <ul class="nav__ul">
+               <li class="nav__li">
+                   <a class="nav__a" href="createparty.html"><i class="fas fa-address-book"></i><span class="nav__span">Create Political Party</span></a>
+               </li>
+               <li class="nav__li">
+                   <a class="nav__a" href="manageparties.html"><i class="fas fa-calculator"></i><span class="nav__span">Manage Political Party</span></a>
+               </li>
+               <li class="nav__li">
+                   <a class="nav__a" href="createoffice.html"><i class="fas fa-file-alt"></i><span class="nav__span">Create Government Office</span></a>
+               </li>
+            </ul>
+        </nav>
+        <section>
+            <h1 class="section__title">create government office</h1>
+            <form class="form form--create-office">
+              <label class="form__label" for="office-name">Office Name</label>
+              <input class="form__input" type="text" name="office-name" id="office-name">
+              <label class="form__label" for="institution">Institution</label>
+              <input class="form__input" type="text" name="institution" id="institution">
+              <label class="form__label" for="positions">Number of Positions</label>
+              <input class="form__input" type="text" name="positions" id="positions">
+              <label class="form__label" for="requirements">Requirements</label>
+              <textarea rows="4" cols="50" class="form__input" id="requirements"></textarea>
+              <input class="form__submit button button--green form-last-input" value="Create" type="submit" name="create-party-submit" id="create-party-submit">
+            </form>
+        </section>
+    </main>
+	
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
