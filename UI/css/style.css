@@ -20,7 +20,7 @@ body{
 	background-color: var(--color-grey-light);
 }
 
-/*Home page*/
+/*********************Home page********************/
 .home-page {
 	width: 100%;
 	height: 100vh;
@@ -110,6 +110,10 @@ body{
 	padding: 1rem 4rem;
 	font-size: 1.2rem;
 }
+.button--table{
+	padding: .8rem 1.7rem;
+	font-size: 1.2rem;
+}
 .button--modal--first-child{
 	margin-left: 1.2rem;
 }
@@ -172,7 +176,7 @@ body{
 	}
 }
 
-/* Modal */
+/******************* Modal ******************/
 
 .modal {
     position: fixed;
@@ -240,6 +244,7 @@ body{
     font-family: inherit;
     width: 100%;
     padding: 1.5rem;
+    font-size: 1.4rem;
 }
 .modal-footer{
 	display: flex;
@@ -248,7 +253,7 @@ body{
     border-top: 1px solid #e6e6e6;
     padding: .5rem;
 }
-/* form */
+/************************* form *********************/
 .form{
 	display: flex;
 	width: 35rem;
@@ -292,7 +297,7 @@ body{
 	margin-bottom: 2rem;
 }
 /********* LAYOUT **************/
-/* Header */
+/************ Header **********/
 header{
 	height:60px;
 	width:100%;
@@ -323,7 +328,7 @@ header{
  	border-radius: 50%;
 
  }
-/* Main Container */
+/******** Main Container ***********/
 main{
 	display: flex;
 	width: 100%;
@@ -333,7 +338,7 @@ main{
 	margin-top: 6.5rem;
 	font-family: 'Roboto',sans-serif;
 }
-/* Navigations */
+/********** Navigations **************/
 nav{
 	width: 18%;
 	min-height: 10rem;
@@ -385,7 +390,7 @@ nav{
 .nav__span{
 	margin-left: 1.2rem;
 }
-/* content */
+/*********** content ***********/
 section{
 	width: 80%;
 	/*min-height: 50rem;*/
@@ -396,12 +401,52 @@ section{
 	flex-direction: column;
 	align-items: center;
 	align-self: flex-start;
+	padding: 2rem;
 }
 .section__title{
 	font-size: 2rem;
 	color: #42454a;
 	font-weight: 400;
 	text-transform: uppercase;
-	margin: 1.5rem 0 3rem 0;
+	margin: 0 0 3rem 0;
 	text-align: center;
 }
+
+/***************** Table ***********************/
+
+.table{
+    border-collapse: collapse;
+    border: 1px solid #e6e6e6; 
+    table-layout: auto;
+    overflow:auto; 
+    background-color: #fefefe;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    width: 100%;
+    cursor: pointer;
+}
+.table tr:nth-of-type(odd) { 
+    background: #f9fafa;
+}
+.table th { 
+    color: black; 
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+.table td,.table th { 
+    border: 1px solid #e6e6e6; 
+    text-align: center; 
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+}
+.table td{
+    color: #42454a;
+}
+.table tr:hover td{
+  color:#fff;
+  background-color: #012303;
+}
+.table--special-row{
+  font-weight: bold;
+}
+

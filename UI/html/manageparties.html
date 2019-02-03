@@ -31,21 +31,126 @@
             </ul>
         </nav>
         <section>
-            <h1 class="section__title">create government office</h1>
-            <form class="form form--create-office">
-              <label class="form__label" for="office-name">Office Name</label>
-              <input class="form__input" type="text" name="office-name" id="office-name">
-              <label class="form__label" for="institution">Institution</label>
-              <input class="form__input" type="text" name="institution" id="institution">
-              <label class="form__label" for="positions">Number of Positions</label>
-              <input class="form__input" type="text" name="positions" id="positions">
-              <label class="form__label" for="requirements">Requirements</label>
-              <textarea rows="4" cols="50" class="form__input" id="requirements"></textarea>
-              <input class="form__submit button button--green form-last-input" value="Create" type="submit" name="create-party-submit" id="create-party-submit">
-            </form>
+          <h1 class="section__title">manage parties</h1>
+          <table class="table">
+            <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Leader</th>
+                  <th>Telephone</th>
+                  <th>Email</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody class="medicalact-table-tbody">
+              <tr>
+                  <td>Peaople's Party</td>
+                  <td>Kigali</td>
+                  <td>Niyomwungeri Patrick</td>
+                  <td>0783888888</td>
+                  <td>Patriniyo12@gmail.com</td>
+                  <td><button class="button button--green button--table button--edit">Update</button></td>
+                  <td><button class="button button--red button--table button--update">Delete</button></td>
+              </tr>
+              <tr>
+                  <td>Democratic Party</td>
+                  <td>Kigali</td>
+                  <td>Niyomwungeri Patrick</td>
+                  <td>0783888888</td>
+                  <td>Patriniyo12@gmail.com</td>
+                  <td><button class="button button--green button--table button--edit">Update</button></td>
+                  <td><button class="button button--red button--table button--update">Delete</button></td>
+              </tr>
+              <tr>
+                  <td>Liberal Party</td>
+                  <td>Kigali</td>
+                  <td>Niyomwungeri Patrick</td>
+                  <td>0783888888</td>
+                  <td>Patriniyo12@gmail.com</td>
+                  <td><button class="button button--green button--table button--edit">Update</button></td>
+                  <td><button class="button button--red button--table button--update">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
         </section>
     </main>
+
+     <div class="modal" id="update-party-modal">
+        <div class="modal-content">
+            <div class="modal-content-header">
+                <div class="modal-content-title">
+                    <h1 class="modal_h1">Update Party</h1>
+                </div>
+                <div class="modal-content-close" id="update-party-modal-close">
+                    <span class="close-button">&times;</span>
+                </div>
+            </div>
+            <div class="content-placeholder">
+                <!-- place your content here -->
+                <form class="form form--update-party" id="form--update-party">
+                  <label class="form__label" for="party-name">Party Name</label>
+                  <input class="form__input" value="Liberal Party" type="text" name="party-name" id="party-name">
+                  <label class="form__label" for="party-address">Address Of Party</label>
+                  <input class="form__input" value="Kigali" type="text" name="party-address" id="party-address">
+                  <label class="form__label" for="party-leader">Leader Of Party</label>
+                  <input class="form__input" value="Niyomwungeri Patrick" type="text" name="party-leader" id="party-leader">
+                  <label class="form__label" for="party-phone">Telephone</label>
+                  <input class="form__input" value="0783889302" type="Telephone" name="party-phone" id="party-phone">
+                  <label class="form__label" for="party-email">Email</label>
+                  <input class="form__input" value="Patriniyo12@gmail.com" type="Email" name="party-email" id="party-email">
+                  <input class="form__submit button button--green" value="Update" type="submit" name="update-party-submit" id="update-party-submit">
+                </form>
+            </div>
+            <!-- <div class="modal-footer">
+              <button class="button button--red button--modal">Cancel</button>
+              <button class="button button--green button--modal button--modal--first-child">OK</button>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="modal" id="update-party-confirmation-modal">
+      <div class="modal-content">
+        <div class="modal-content-header">
+            <div class="modal-content-title">
+                <h1 class="modal_h1">Update Confirmation</h1>
+            </div>
+            <div class="modal-content-close" id="update-party-confirmation-close">
+                <span class="close-button">&times;</span>
+            </div>
+        </div>
+        <div class="content-placeholder">
+            <!-- place your content here -->
+            The Party Updated succesfully
+        </div>
+        <div class="modal-footer">
+          <button class="button button--green button--modal button--modal--first-child" id="update-party-confirmation-ok">OK</button>
+        </div>
+      </div>
+    </div>
+
+     <div class="modal" id="delete-party-modal">
+        <div class="modal-content">
+            <div class="modal-content-header">
+                <div class="modal-content-title">
+                    <h1 class="modal_h1">Deleting Party</h1>
+                </div>
+                <div class="modal-content-close" id="delete-party-close">
+                    <span class="close-button">&times;</span>
+                </div>
+            </div>
+            <div class="content-placeholder">
+                <!-- place your content here -->
+                Are you sure you want to delete this party?
+            </div>
+            <div class="modal-footer">
+              <button class="button button--red button--modal" id="delete-party-modal-cancel">Cancel</button>
+              <button class="button button--green button--modal button--modal--first-child" id="delete-party-modal-ok">OK</button>
+            </div>
+        </div>
+    </div>
 	
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 </body>
 </html>
