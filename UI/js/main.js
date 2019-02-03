@@ -18,3 +18,16 @@ const toggleModal = (id) =>{
 	let modal = document.getElementById(id);
     modal.classList.toggle("show-modal");
 }
+
+/*const formSignInSubmit = document.getElementById("form--sign-in-submit");*/
+const formSignIn = document.getElementById("form--sign-in");
+formSignIn.addEventListener("submit", (e)=>{
+	e.preventDefault();
+	window.location = "./ui/html/createparty.html";
+});
+const formSignUp = document.getElementById("form--sign-up");
+formSignUp.addEventListener("submit", (e)=>{
+	e.preventDefault();
+	window.location = "./ui/html/createparty.html";
+});
+
