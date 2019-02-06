@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>Welcome to Politico</title>
+</head>
+
+<body>
+	<div class="home-page">
+		<div class="background-video">
+			<video class="background-video__content" autoplay muted loop>
+				<source src="../images/voting-video.webm" type="video/webm">
+			</video>
+		</div>
+		<div class="home-page__description">
+			<h1 class="home-page__h1">
+				Politico enables citizens give their mandate to politicians running for different government offices while building trust
+				in the process through transparency.
+			</h1>
+			<h2 class="home-page__h2">
+				&ldquo;A man without a vote is a man without protection&rdquo;
+			</h2>
+			<span class="home-page__span">Lyndon B. Johnson</span>
+			<div class="home-page-buttons">
+				<button class="button button--green" id="sign-in-button">Sign In</button>
+				<button class="button button--red" id="sign-up-button">Sign Up</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- modal -->
+	<div class="modal" id="sign-in-modal">
+		<div class="modal-content">
+			<div class="modal-content-header">
+				<div class="modal-content-title">
+					<h1 class="modal_h1">Sign In</h1>
+				</div>
+				<div class="modal-content-close" id="sign-in-modal-close">
+					<span class="close-button">&times;</span>
+				</div>
+			</div>
+			<div class="content-placeholder">
+				<!-- place your content here -->
+				<form class="form form--sign-in" id="form--sign-in">
+					<label class="form__label" required for="form--sign-in-username">Username</label>
+					<input class="form__input" required placeholder="Username" type="text" name="sign-in-username" id="form--sign-in-username">
+					<label class="form__label" required for="form--sign-in-password">Password</label>
+					<input class="form__input" required placeholder="Password" type="password" name="sign-in-password" id="form--sign-in-password">
+					<input class="form__submit button button--green form-last-input" value="Sign In" type="submit" name="sign-in-submit" id="form--sign-in-submit">
+				</form>
+			</div>
+			<!-- <div class="modal-footer">
+            	<button class="button button--red button--modal">Cancel</button>
+            	<button class="button button--green button--modal button--modal--first-child">OK</button>
+            </div> -->
+		</div>
+	</div>
+
+	<div class="modal" id="sign-up-modal">
+		<div class="modal-content">
+			<div class="modal-content-header">
+				<div class="modal-content-title">
+					<h1 class="modal_h1">Sign Up</h1>
+				</div>
+				<div class="modal-content-close" id="sign-up-modal-close">
+					<span class="close-button">&times;</span>
+				</div>
+			</div>
+			<div class="content-placeholder">
+				<!-- place your content here -->
+				<form class="form form--sign-up" id="form--sign-up">
+					<label class="form__label" for="form--sign-up-firstname">First Name</label>
+					<input class="form__input" required placeholder="First Name" type="text" name="sign-up-firstname" id="form--sign-up-firstname">
+					<label class="form__label" for="form--sign-up-lastname">Last Name</label>
+					<input class="form__input" required placeholder="Last Name" type="text" name="sign-up-lastname" id="form--sign-up-lastname">
+					<label class="form__label" for="form--sign-up-username">Username</label>
+					<input class="form__input" required placeholder="Username" type="text" name="sign-up-username" id="form--sign-up-username">
+					<label class="form__label" for="form--sign-up-password">Password</label>
+					<input class="form__input" required placeholder="Password" type="password" name="sign-up-password" id="form--sign-up-password">
+					<label class="form__label" for="form--sign-up-repeat-password"> Repeat Password</label>
+					<input class="form__input" required placeholder="Repeat Password" type="password" name="sign-up-repeat-password" id="form--sign-up-repeat-password">
+					<input class="form__submit button button--green" value="Sign Up" type="submit" name="sign-up-submit" id="form--sign-up-submit">
+				</form>
+			</div>
+			<!-- <div class="modal-footer">
+            	<button class="button button--red button--modal">Cancel</button>
+            	<button class="button button--green button--modal button--modal--first-child">OK</button>
+            </div> -->
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/main.js"></script>
+</body>
+
+</html>
