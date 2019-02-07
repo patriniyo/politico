@@ -28,14 +28,6 @@ class Party {
     this.parties.push(newParty);
     return newParty;
   }
-
-  /**
-   * Get party by name
-   * @param {String} name - Party name
-   */
-  getByName() {
-
-  }
 }
 
 export default new Party();
