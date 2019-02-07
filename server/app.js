@@ -18,7 +18,7 @@ app.post('/api/v1/parties', Party.createParty);
   });
 }); */
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.info(`the server has started on ${PORT}`));
 
 export default app;
