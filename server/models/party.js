@@ -1,34 +1,40 @@
 /**
- * Class is representing parties
+ * Class represents party
  * @exports
  * @class
  */
 class Party {
+  /**
+   * class constructor
+   * @param {object} data
+   */
   constructor() {
     this.parties = [];
   }
 
   /**
    * Create new party
-   * @param {Object} data - Party
-   * @returns {Object} Some data of a new party
+   * @param {Object} data
+   *
+   * @returns {Object} party object
    */
   createParty(data) {
-    const party = data;
-    const id = this.parties.length === 0 ? 1 : this.parties[this.parties.length - 1].id + 1;
-    party.createdOn = new Date();
-    party.id = id;
-    this.parties.push(data);
-    return { id: party.id, name: party.name };
+    const newParty = {
+      id: 1,
+      name: data.name,
+      hqAddress: data.hqAddress,
+      logoUrl: data.logoUrl
+    };
+    this.parties.push(newParty);
+    return newParty;
   }
 
   /**
    * Get party by name
    * @param {String} name - Party name
    */
-  getByName(name) {
-    const data = this.parties.find(party => party.name === name);
-    return data;
+  getByName() {
+
   }
 }
 
