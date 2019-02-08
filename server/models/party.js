@@ -45,9 +45,9 @@ class Party {
   }
 
   /**
-   * 
+   *
    * @param {id} id
-   * @param {object} data 
+   * @param {object} data
    */
 
   updateParty(id, data) {

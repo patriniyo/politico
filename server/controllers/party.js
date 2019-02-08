@@ -18,7 +18,7 @@ class Party {
         error: 'Invalid data'
       });
     }
-    if (partyModel.findPartyByName(req.body.name) === undefined) {//check if the party already exist
+    if (partyModel.findPartyByName(req.body.name) === undefined) {// check if the party already exist
       const party = partyModel.createParty(req.body);
       return res.status(200).send({
         status: 200,
@@ -40,6 +40,7 @@ class Party {
       data
     });
   }
+
   /**
    * @returns {object} returns all parties
    */

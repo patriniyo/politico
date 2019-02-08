@@ -4,11 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "start": "nodemon --exec nbabel-node server/app.js",
-=======
     "start": "nodemon --exec babel-node server/app.js",
->>>>>>> ft-create-party-endpoint-163785895
     "test": "mocha --require babel-register server/test/**/*.test.js"
   },
   "repository": {
