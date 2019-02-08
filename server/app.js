@@ -8,7 +8,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/api/v1/parties', Party.createParty);
-
+app.get('/api/v1/parties', Party.getAllParties);
+app.get('/api/v1/parties/:id', Party.getSpecificParty);
+app.put('/api/v1/parties/:id', Party.updateParty);
+app.delete('/api/v1/parties/:id', Party.deleteParty);
 /* app.use('/api/v1/parties', parties); */
 
 /* app.use((req, res) => {
