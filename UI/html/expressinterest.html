@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+  <link href="../images/fontawesome/css/all.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <title>Running for office</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="header__h1">politico</h1>
+    <div class="header__account">
+      <button class="button button--header">Sign Out</button>
+      <img class="header__img" src="../images/profile.jpg">
+    </div>
+  </header>
+  <main>
+    <section class="section--centered">
+      <h1 class="section__title">running for office</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Office</th>
+            <th>Type</th>
+            <th>Positions</th>
+            <th>Location</th>
+            <th>Run</th>
+          </tr>
+        </thead>
+        <tbody class="medicalact-table-tbody">
+          <tr>
+            <td>Member of Parliament</td>
+            <td>Local Government</td>
+            <td>40</td>
+            <td>Kigali</td>
+            <td>
+              <button class="button button--green button--table button--run">Run</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Mayor</td>
+            <td>Local Government</td>
+            <td>3</td>
+            <td>Rwamagana</td>
+            <td>
+              <button class="button button--green button--table button--run">Run</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Executive Secretary</td>
+            <td>Local Government</td>
+            <td>3</td>
+            <td>Butangampundu</td>
+            <td>
+              <button class="button button--green button--table button--run">Run</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <a class="pagination__a" href="#">&laquo;</a>
+        <a class="pagination__a" href="#">1</a>
+        <a class="pagination__a" href="#">2</a>
+        <a class="pagination__a" href="#">3</a>
+        <a class="pagination__a" href="#">4</a>
+        <a class="pagination__a" href="#">&raquo;</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="run-comfirmation-modal">
+    <div class="modal-content">
+      <div class="modal-content-header">
+        <div class="modal-content-title">
+          <h1 class="modal_h1">Expressing Interest</h1>
+        </div>
+        <div class="modal-content-close" id="run-comfirmation-close">
+          <span class="close-button">&times;</span>
+        </div>
+      </div>
+      <div class="content-placeholder">
+        <!-- place your content here -->
+        Your Candidacy was received!
+      </div>
+      <div class="modal-footer">
+        <button class="button button--green button--modal button--modal--first-child" id="run-comfirmation-ok">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="./../js/main.js"></script>
+</body>
+
+</html>

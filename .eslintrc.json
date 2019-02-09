@@ -4,7 +4,8 @@
     "env": {
         "node": true,
         "es6": true,
-        "mocha": true
+        "mocha": true,
+        "browser": true
     },
     "rules": {
         "linebreak-style": "off",
@@ -13,6 +14,10 @@
             "error",
             "never"
         ],
-        "class-methods-use-this": "off"
+        "class-methods-use-this": "off",
+        "indent": [
+            "error",
+            2
+        ]
     }
 }
