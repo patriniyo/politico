@@ -1,109 +1,130 @@
-const closeSignUpModal = document.getElementById("sign-up-modal-close");
-const closeSignInModal = document.getElementById("form--sign-in");
-const signInButton = document.getElementById("sign-in-button");
-const signUpButton = document.getElementById("sign-up-button");
-const formSignIn = document.getElementById("form--sign-in");
-const formSignUp = document.getElementById("form--sign-up");
+const closeSignUpModal = document.getElementById('sign-up-modal-close');
+const closeSignInModal = document.getElementById('sign-in-modal-close');
+const signInButton = document.getElementById('sign-in-button');
+const signUpButton = document.getElementById('sign-up-button');
+const formSignIn = document.getElementById('form--sign-in');
+const formSignUp = document.getElementById('form--sign-up');
+const buttonEdit = document.getElementsByClassName('button--edit');
+const buttonUpdate = document.getElementsByClassName('button--update');
+const deletePartyClose = document.getElementById('delete-party-close');
+const deletePartyCancel = document.getElementById('delete-party-modal-cancel');
+const deletePartyOk = document.getElementById('delete-party-modal-ok');
+const updatePartyClose = document.getElementById('update-party-modal-close');
+const updatePartySubmit = document.getElementById('update-party-submit');
+const updatePartyConfirmationClose = document.getElementById('update-party-confirmation-close');
+const runComfirmationOk = document.getElementById('run-comfirmation-ok');
+const updatePartyConfirmationOk = document.getElementById('update-party-confirmation-ok');
+const runComfirmationClose = document.getElementById('run-comfirmation-close');
+const runButton = document.getElementsByClassName('button--run');
 const toggleModal = (id) => {
-	let modal = document.getElementById(id);
-	modal.classList.toggle("show-modal");
-}
+	const modal = document.getElementById(id);
+	modal.classList.toggle('show-modal');
+};
 if (closeSignUpModal) {
-	closeSignUpModal.addEventListener("click", () => {
-		toggleModal("sign-up-modal");
+	closeSignUpModal.addEventListener('click', () => {
+		toggleModal('sign-up-modal');
 	});
 }
 if (closeSignInModal) {
-	const closeSignInModal = document.getElementById("sign-in-modal-close");
-	closeSignInModal.addEventListener("click", () => {
-		toggleModal("sign-in-modal");
+	closeSignInModal.addEventListener('click', () => {
+		toggleModal('sign-in-modal');
 	});
 }
 if (signInButton) {
-	signInButton.addEventListener("click", () => {
-		toggleModal("sign-in-modal");
+	signInButton.addEventListener('click', () => {
+		toggleModal('sign-in-modal');
 	});
 }
 if (signUpButton) {
-	signUpButton.addEventListener("click", () => {
-		toggleModal("sign-up-modal");
+	signUpButton.addEventListener('click', () => {
+		toggleModal('sign-up-modal');
 	});
 }
 if (formSignIn) {
-	/*const formSignInSubmit = document.getElementById("form--sign-in-submit");*/
-	formSignIn.addEventListener("submit", (e) => {
+	/* const formSignInSubmit = document.getElementById("form--sign-in-submit"); */
+	formSignIn.addEventListener('submit', (e) => {
 		e.preventDefault();
-		window.location = "./createparty.html";
+		window.location = './createparty.html';
 	});
 }
 if (formSignUp) {
-	formSignUp.addEventListener("submit", (e) => {
+	formSignUp.addEventListener('submit', (e) => {
 		e.preventDefault();
-		window.location = "./createparty.html";
+		window.location = './createparty.html';
 	});
 }
-const buttonEdit = document.getElementsByClassName("button--edit");
-const buttonUpdate = document.getElementsByClassName("button--update");
-/*console.log(buttonEdit);*/
+
+/* console.log(buttonEdit); */
 if (buttonEdit) {
 	Array.from(buttonEdit).forEach((button) => {
-		button.addEventListener("click", function () {
-			toggleModal("update-party-modal");
+		button.addEventListener('click', () => {
+			toggleModal('update-party-modal');
+		});
+	});
+}
+if (runButton) {
+	Array.from(runButton).forEach((button) => {
+		button.addEventListener('click', () => {
+			toggleModal('run-comfirmation-modal');
 		});
 	});
 }
 if (buttonUpdate) {
 	Array.from(buttonUpdate).forEach((button) => {
-		button.addEventListener("click", function () {
-			toggleModal("delete-party-modal");
+		button.addEventListener('click', () => {
+			toggleModal('delete-party-modal');
 		});
 	});
 }
-const deletePartyClose = document.getElementById("delete-party-close");
 if (deletePartyClose) {
-	deletePartyClose.addEventListener("click", function () {
-		toggleModal("delete-party-modal");
+	deletePartyClose.addEventListener('click', () => {
+		toggleModal('delete-party-modal');
 	});
 }
-const deletePartyCancel = document.getElementById("delete-party-modal-cancel");
 if (deletePartyCancel) {
-	deletePartyCancel.addEventListener("click", function () {
-		toggleModal("delete-party-modal");
+	deletePartyCancel.addEventListener('click', () => {
+		toggleModal('delete-party-modal');
 	});
 }
-const deletePartyOk = document.getElementById("delete-party-modal-ok");
+
 if (deletePartyOk) {
-	deletePartyOk.addEventListener("click", function () {
-		toggleModal("delete-party-modal");
+	deletePartyOk.addEventListener('click', () => {
+		toggleModal('delete-party-modal');
 	});
 }
-const updatePartyClose = document.getElementById("update-party-modal-close");
 if (updatePartyClose) {
-	updatePartyClose.addEventListener("click", function () {
-		toggleModal("update-party-modal");
+	updatePartyClose.addEventListener('click', () => {
+		toggleModal('update-party-modal');
 	});
 }
-const updatePartySubmit = document.getElementById("update-party-submit");
+
 if (updatePartySubmit) {
-	updatePartySubmit.addEventListener("click", function (e) {
+	updatePartySubmit.addEventListener('click', (e) => {
 		e.preventDefault();
-		toggleModal("update-party-confirmation-modal");
-		toggleModal("update-party-modal");
+		toggleModal('update-party-confirmation-modal');
+		toggleModal('update-party-modal');
 	});
 }
 
-const updatePartyConfirmationClose = document.getElementById("update-party-confirmation-close");
 if (updatePartyConfirmationClose) {
-	updatePartyConfirmationClose.addEventListener("click", function () {
-		toggleModal("update-party-confirmation-modal");
+	updatePartyConfirmationClose.addEventListener('click', () => {
+		toggleModal('update-party-confirmation-modal');
 	});
 }
-const updatePartyConfirmationOk = document.getElementById("update-party-confirmation-ok");
+
 if (updatePartyConfirmationOk) {
-	updatePartyConfirmationOk.addEventListener("click", function () {
-		toggleModal("update-party-confirmation-modal");
+	updatePartyConfirmationOk.addEventListener('click', () => {
+		toggleModal('update-party-confirmation-modal');
 	});
 }
 
-
-
+if (runComfirmationClose) {
+	runComfirmationClose.addEventListener('click', () => {
+		toggleModal('run-comfirmation-modal');
+	});
+}
+if (runComfirmationOk) {
+	runComfirmationOk.addEventListener('click', () => {
+		toggleModal('run-comfirmation-modal');
+	});
+}
