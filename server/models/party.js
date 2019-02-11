@@ -29,6 +29,7 @@ class Party {
     this.parties.push(newParty);
     return newParty;
   }
+
   /**
    * @returns {object} returns all parties
    */
