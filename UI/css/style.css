@@ -205,10 +205,13 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fefefe;
-    min-width: 400px;
+		min-width: 4rem;
     border-radius: .4rem;
     font-family: inherit;
     overflow: hidden;
+}
+.modal-content--long {
+	min-height: 50rem;
 }
 .modal-content-header{
     display : flex;
@@ -483,6 +486,7 @@ section{
 .candidate{
 	width: 70%;
 	display: flex;
+	justify-content: center;
 }
 .candidate-profile{
 	width: 14rem;
@@ -525,7 +529,7 @@ section{
 .candidate__hr{
 	border: 0;
 	height: 1px;
-	width: 80%;
+	width: 50%;
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #42454a, rgba(0, 0, 0, 0));
 }
 .candidate-vote__voice__i{
