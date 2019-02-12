@@ -29,8 +29,8 @@ describe('parties endpoints test', () => {
         .post('/api/v1/parties/')
         .send(party)
         .end((err, res) => {
-          res.should.have.status(201);
-          res.body.status.should.equal(201);
+          res.should.have.status(200);
+          res.body.status.should.equal(200);
           res.body.data[0].should.be.an('object');
           done();
         });

@@ -23,14 +23,14 @@ app.use('/api/v1/offices', offices);
 // app.get('/api/v1/offices/:id', Office.getSpecificOffice);
 /* app.use('/api/v1/parties', parties); */
 
-/* app.use((req, res) => {
+app.use((req, res) => {
   res.status(404).send({
     status: 404,
     error: 'Resources not found'
   });
-}); */
+});
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.info(`the server has started on ${PORT}`));
 
 export default app;

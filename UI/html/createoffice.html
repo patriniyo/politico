@@ -39,20 +39,37 @@
                         <span class="nav__span">Create Government Office</span>
                     </a>
                 </li>
+                <li class="nav__li">
+                    <a class="nav__a" href="allparties.html">
+                        <i class="fas fa-chalkboard"></i>
+                        <span class="nav__span">All Political Parties</span>
+                    </a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a" href="voting.html">
+                        <i class="fas fa-columns"></i>
+                        <span class="nav__span">Vote</span>
+                    </a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a" href="expressinterest.html">
+                        <i class="fas fa-clone"></i>
+                        <span class="nav__span">Express Interest</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <section>
             <h1 class="section__title">create government office</h1>
             <form class="form form--create-office">
-                <label class="form__label" for="office-name">Office Name</label>
+                <label class="form__label" for="office-name">Name</label>
                 <input class="form__input" type="text" name="office-name" id="office-name">
-                <label class="form__label" for="institution">Institution</label>
-                <input class="form__input" type="text" name="institution" id="institution">
-                <label class="form__label" for="positions">Number of Positions</label>
-                <input class="form__input" type="text" name="positions" id="positions">
-                <label class="form__label" for="requirements">Requirements</label>
-                <textarea rows="4" cols="50" class="form__input" id="requirements"></textarea>
-                <input class="form__submit button button--green" value="Create" type="submit" name="create-party-submit" id="create-party-submit">
+                <label class="form__label" for="type">Type</label>
+                <input class="form__input" type="text" name="type" id="type">
+                <label class="form__label" for="location">Location</label>
+                <input class="form__input" type="text" name="location" id="location">
+                <input class="form__submit button button--green" value="Create" type="submit" name="create-party-submit"
+                    id="create-party-submit">
             </form>
         </section>
     </main>

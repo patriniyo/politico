@@ -39,6 +39,24 @@
                         <span class="nav__span">Create Government Office</span>
                     </a>
                 </li>
+                <li class="nav__li">
+                    <a class="nav__a" href="allparties.html">
+                        <i class="fas fa-chalkboard"></i>
+                        <span class="nav__span">All Political Parties</span>
+                    </a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a" href="voting.html">
+                        <i class="fas fa-columns"></i>
+                        <span class="nav__span">Vote</span>
+                    </a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a" href="expressinterest.html">
+                        <i class="fas fa-clone"></i>
+                        <span class="nav__span">Express Interest</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <section>
@@ -47,9 +65,8 @@
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Address</th>
-                        <th>Leader</th>
-                        <th>Telephone</th>
+                        <th>Headquarter Address</th>
+                        <th>Logo</th>
                         <th>Email</th>
                         <th>Edit</th>
                         <th>Delete</th>
@@ -59,8 +76,7 @@
                     <tr>
                         <td>Peaople's Party</td>
                         <td>Kigali</td>
-                        <td>Niyomwungeri Patrick</td>
-                        <td>0783888888</td>
+                        <td>intare.jpeg</td>
                         <td>Patriniyo12@gmail.com</td>
                         <td>
                             <button class="button button--green button--table button--edit">Update</button>
@@ -72,8 +88,7 @@
                     <tr>
                         <td>Democratic Party</td>
                         <td>Kigali</td>
-                        <td>Niyomwungeri Patrick</td>
-                        <td>0783888888</td>
+                        <td>intare.jpeg</td>
                         <td>Patriniyo12@gmail.com</td>
                         <td>
                             <button class="button button--green button--table button--edit">Update</button>
@@ -85,8 +100,7 @@
                     <tr>
                         <td>Liberal Party</td>
                         <td>Kigali</td>
-                        <td>Niyomwungeri Patrick</td>
-                        <td>0783888888</td>
+                        <td>intare.jpeg</td>
                         <td>Patriniyo12@gmail.com</td>
                         <td>
                             <button class="button button--green button--table button--edit">Update</button>
@@ -123,15 +137,15 @@
                 <form class="form form--update-party form--sign-up" id="form--update-party">
                     <label class="form__label" for="party-name">Party Name</label>
                     <input class="form__input" value="Liberal Party" type="text" name="party-name" id="party-name">
-                    <label class="form__label" for="party-address">Address Of Party</label>
+                    <label class="form__label" for="party-address">Headquarter Address</label>
                     <input class="form__input" value="Kigali" type="text" name="party-address" id="party-address">
-                    <label class="form__label" for="party-leader">Leader Of Party</label>
-                    <input class="form__input" value="Niyomwungeri Patrick" type="text" name="party-leader" id="party-leader">
-                    <label class="form__label" for="party-phone">Telephone</label>
-                    <input class="form__input" value="0783889302" type="Telephone" name="party-phone" id="party-phone">
+                    <label class="form__label" for="party-logo">Logo</label>
+                    <input class="form__input" value="intare.jpeg" type="text" name="party-logo" id="party-logo">
                     <label class="form__label" for="party-email">Email</label>
-                    <input class="form__input" value="Patriniyo12@gmail.com" type="Email" name="party-email" id="party-email">
-                    <input class="form__submit button button--green" value="Update" type="submit" name="update-party-submit" id="update-party-submit">
+                    <input class="form__input" value="Patriniyo12@gmail.com" type="Email" name="party-email"
+                        id="party-email">
+                    <input class="form__submit button button--green" value="Update" type="submit"
+                        name="update-party-submit" id="update-party-submit">
                 </form>
             </div>
             <!-- <div class="modal-footer">
@@ -156,7 +170,8 @@
                 The Party Updated succesfully
             </div>
             <div class="modal-footer">
-                <button class="button button--green button--modal button--modal--first-child" id="update-party-confirmation-ok">OK</button>
+                <button class="button button--green button--modal button--modal--first-child"
+                    id="update-party-confirmation-ok">OK</button>
             </div>
         </div>
     </div>
@@ -177,7 +192,8 @@
             </div>
             <div class="modal-footer">
                 <button class="button button--red button--modal" id="delete-party-modal-cancel">Cancel</button>
-                <button class="button button--green button--modal button--modal--first-child" id="delete-party-modal-ok">OK</button>
+                <button class="button button--green button--modal button--modal--first-child"
+                    id="delete-party-modal-ok">OK</button>
             </div>
         </div>
     </div>
