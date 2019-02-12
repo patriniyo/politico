@@ -3,10 +3,10 @@ Politico enables citizens give their mandate to politicians running for differen
 
 #### Getting Started
 > **Installation**
-> - Clone the repo `https://github.com/blaisebakundukize/Questioner.git` inside foldername
-> - Ensure you have installed Nodejs which comes with npm
+> - Clone the repo `https://github.com/patriniyo/politico.git` inside foldername
 > - Navigate into the app root directory: `cd foldername`
 > - Run `$ npm install` to install all dependencies
-> - Run tests to ensure the app is not broken: `npm test`
-> - If test fail to run, install mocha globally: `npm install -g mocha`
+> - Run `$ npm run` to start the application
+> - Run `npm test` for testing 
+> - If tests fail to run, install mocha globally: `npm install -g mocha`
 > - Run tests again
