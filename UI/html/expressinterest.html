@@ -19,23 +19,61 @@
     </div>
   </header>
   <main>
-    <section class="section--centered">
+    <nav>
+      <ul class="nav__ul">
+        <li class="nav__li">
+          <a class="nav__a" href="createparty.html">
+            <i class="fas fa-address-book"></i>
+            <span class="nav__span">Create Political Party</span>
+          </a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="manageparties.html">
+            <i class="fas fa-calculator"></i>
+            <span class="nav__span">Manage Political Party</span>
+          </a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="createoffice.html">
+            <i class="fas fa-file-alt"></i>
+            <span class="nav__span">Create Government Office</span>
+          </a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="allparties.html">
+            <i class="fas fa-chalkboard"></i>
+            <span class="nav__span">All Political Parties</span>
+          </a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="voting.html">
+            <i class="fas fa-columns"></i>
+            <span class="nav__span">Vote</span>
+          </a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="expressinterest.html">
+            <i class="fas fa-clone"></i>
+            <span class="nav__span">Express Interest</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section>
       <h1 class="section__title">running for office</h1>
       <table class="table">
         <thead>
           <tr>
-            <th>Office</th>
+            <th>Name</th>
             <th>Type</th>
-            <th>Positions</th>
             <th>Location</th>
             <th>Run</th>
           </tr>
         </thead>
-        <tbody class="medicalact-table-tbody">
+        <tbody>
           <tr>
             <td>Member of Parliament</td>
             <td>Local Government</td>
-            <td>40</td>
             <td>Kigali</td>
             <td>
               <button class="button button--green button--table button--run">Run</button>
@@ -44,7 +82,6 @@
           <tr>
             <td>Mayor</td>
             <td>Local Government</td>
-            <td>3</td>
             <td>Rwamagana</td>
             <td>
               <button class="button button--green button--table button--run">Run</button>
@@ -53,7 +90,6 @@
           <tr>
             <td>Executive Secretary</td>
             <td>Local Government</td>
-            <td>3</td>
             <td>Butangampundu</td>
             <td>
               <button class="button button--green button--table button--run">Run</button>
@@ -87,7 +123,8 @@
         Your Candidacy was received!
       </div>
       <div class="modal-footer">
-        <button class="button button--green button--modal button--modal--first-child" id="run-comfirmation-ok">OK</button>
+        <button class="button button--green button--modal button--modal--first-child"
+          id="run-comfirmation-ok">OK</button>
       </div>
     </div>
   </div>

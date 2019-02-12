@@ -19,14 +19,9 @@ class Party {
    * @returns {Object} party object
    */
   createParty(data) {
-<<<<<<< HEAD
-    const newParty = {
-      id: 1,
-=======
     const id = this.parties.length === 0 ? 1 : this.parties[this.parties.length - 1].id + 1;
     const newParty = {
       id,
->>>>>>> ft-running-for-office-163842091
       name: data.name,
       hqAddress: data.hqAddress,
       logoUrl: data.logoUrl
@@ -34,6 +29,7 @@ class Party {
     this.parties.push(newParty);
     return newParty;
   }
+
   /**
    * @returns {object} returns all parties
    */

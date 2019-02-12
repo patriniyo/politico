@@ -24,7 +24,7 @@ class Party {
         status: 200,
         data: party
       });
-    } * /
+    }
   }
 
   findPartyByName(req, res) {
