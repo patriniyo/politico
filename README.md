@@ -17,4 +17,5 @@ Politico enables citizens give their mandate to politicians running for differen
 #### Demo
 https://patriniyo.github.io/politico/UI/html/
 
-
+#### Author
+Niyomwungeri Patrick
