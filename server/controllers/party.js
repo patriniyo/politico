@@ -1,4 +1,6 @@
 import partyModel from '../models/party';
+import validator from '../utils/validator';
+import { read } from 'fs';
 /**
  * Class is controlling parties
  * @exports
@@ -12,12 +14,23 @@ class Party {
    * @returns {object} party object
    */
   createParty(req, res) {
+    const expectedProperties = ['name', 'hqAddress', 'logoUrl'];
     if (Object.getOwnPropertyNames(req.body).length === 0) {
       return res.status(400).send({
         status: 400,
         error: 'Invalid data'
       });
     }
+
+    expectedProperties.forEach((property) => {
+      if (!Object.getOwnPropertyNames(req.body).includes(property)) {
+        return res.status(400).send({
+          status: 400,
+          error: `${property} is mandatory`
+        });
+      }
+    });
+
     if (partyModel.findPartyByName(req.body.name) === undefined) {// check if the party already exist
       const party = partyModel.createParty(req.body);
       return res.status(200).send({
@@ -25,6 +38,10 @@ class Party {
         data: party
       });
     }
+    return res.status(400).send({
+      status: 400,
+      error: `${req.body.name} already exists`
+    });
   }
 
   findPartyByName(req, res) {
