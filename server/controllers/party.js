@@ -1,6 +1,5 @@
 import partyModel from '../models/party';
-import validator from '../utils/validator';
-import { read } from 'fs';
+import joi from 'joi';
 /**
  * Class is controlling parties
  * @exports
@@ -14,28 +13,32 @@ class Party {
    * @returns {object} party object
    */
   createParty(req, res) {
-    const expectedProperties = ['name', 'hqAddress', 'logoUrl'];
-    if (Object.getOwnPropertyNames(req.body).length === 0) {
-      return res.status(400).send({
-        status: 400,
-        error: 'Invalid data'
-      });
-    }
-
-    expectedProperties.forEach((property) => {
-      if (!Object.getOwnPropertyNames(req.body).includes(property)) {
-        return res.status(400).send({
-          status: 400,
-          error: `${property} is mandatory`
-        });
-      }
+    const schema = joi.object().keys({
+      name: joi.string().min(2).required(),
+      hqAddress: joi.string().min(2).required(),
+      logoUrl: joi.string().min(3).required()
     });
 
+    const validationError = joi.validate(req.body, schema, {
+      abortEarly: false
+    });
+
+    if (validationError.error != null) {
+      const errors = [];
+      for (let index = 0; index < validationError.error.details.length; index++) {
+        errors.push(validationError.error.details[index].message);
+      }
+
+      return res.status(400).send({
+        status: res.statusCode,
+        error: errors
+      });
+    }
     if (partyModel.findPartyByName(req.body.name) === undefined) {// check if the party already exist
       const party = partyModel.createParty(req.body);
-      return res.status(200).send({
-        status: 200,
-        data: party
+      return res.status(201).send({
+        status: 201,
+        data: [party]
       });
     }
     return res.status(400).send({
@@ -72,8 +75,8 @@ class Party {
     const data = [];
     const party = partyModel.getSpecificParty(req.params.id);
     if (!party) {
-      return res.status(400).send({
-        status: 400,
+      return res.status(404).send({
+        status: 404,
         error: 'Party not found'
       });
     }
@@ -91,14 +94,35 @@ class Party {
    * @returns {object} updated party
    */
   updateParty(req, res) {
+    const schema = joi.object().keys({
+      name: joi.string().min(2).required(),
+      hqAddress: joi.string().min(2).required(),
+      logoUrl: joi.string().min(3).required()
+    });
+
+    const validationError = joi.validate(req.body, schema, {
+      abortEarly: false
+    });
+
+    if (validationError.error != null) {
+      const errors = [];
+      for (let index = 0; index < validationError.error.details.length; index++) {
+        errors.push(validationError.error.details[index].message);
+      }
+
+      return res.status(400).send({
+        status: res.statusCode,
+        error: errors
+      });
+    }
     const party = partyModel.getSpecificParty(req.params.id);
     if (!party) {
-      return res.status(400).send({
-        status: 400,
+      return res.status(404).send({
+        status: 404,
         error: 'Party not found'
       });
     }
-    const updatedParty = partyModel.updateParty(req.params.id, req.body)
+    const updatedParty = partyModel.updateParty(req.params.id, req.body);
     return res.status(200).send({
       status: 200,
       data: updatedParty
@@ -114,15 +138,15 @@ class Party {
   deleteParty(req, res) {
     const party = partyModel.getSpecificParty(req.params.id);
     if (!party) {
-      return res.status(400).send({
-        status: 400,
+      return res.status(404).send({
+        status: 404,
         error: 'Party not found'
       });
     }
     if (partyModel.deleteParty(req.params.id)) {
       return res.status(200).send({
         status: 200,
-        data: 'The Party deleted'
+        error: 'The Party deleted'
       });
     }
   }
