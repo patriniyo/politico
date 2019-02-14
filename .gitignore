@@ -2,3 +2,4 @@ node_modules
 .eslintrc.json
 .babelrc
 package-lock.json
+.nyc_output
