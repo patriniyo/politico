@@ -133,7 +133,6 @@ class Party {
    *
    * @param {object} req
    * @param {object} res
-   * @returns {void} return statuc code 204
    */
   deleteParty(req, res) {
     const party = partyModel.getSpecificParty(req.params.id);
