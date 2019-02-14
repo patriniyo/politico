@@ -1,23 +1,27 @@
 {
-    "parser": "babel-eslint",
-    "extends": "airbnb-base",
+    "extends": "airbnb",
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
     "env": {
         "node": true,
+        "browser": true,
         "es6": true,
-        "mocha": true,
-        "browser": true
+        "mocha": true
     },
     "rules": {
-        "linebreak-style": "off",
+        "prefer-arrow-callback": "off",
+        "func-names": "off",
         "no-console": "off",
-        "comma-dangle": [
-            "error",
-            "never"
-        ],
+        "radix": "off",
+        "no-plusplus": "off",
+        "object-shorthand": "off",
+        "prefer-template": "off",
+        "max-len": "off",
+        "eqeqeq": "off",
+        "no-lonely-if": "off",
         "class-methods-use-this": "off",
-        "indent": [
-            "error",
-            2
-        ]
+        "import/no-extraneous-dependencies": "off",
+        "no-empty": "off"
     }
 }

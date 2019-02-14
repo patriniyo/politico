@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node server/app.js",
-    "test": "mocha --require babel-register server/test/**/*.test.js"
+    "test": "mocha --require babel-register server/test/**/*.test.js --exit"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "babel-preset-env": "^1.7.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "joi": "^14.3.1",
     "nodemon": "^1.18.9"
   }
 }
