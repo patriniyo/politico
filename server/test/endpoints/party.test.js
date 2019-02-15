@@ -72,7 +72,7 @@ describe('parties endpoints test', () => {
         .end((err, res) => {
           res.should.have.status(404);
           res.body.status.should.equal(404);
-          res.body.should.have.property('error');
+          res.body.should.have.property('message');
           done();
         });
     });
