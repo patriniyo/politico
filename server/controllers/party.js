@@ -77,7 +77,7 @@ class Party {
     if (!party) {
       return res.status(404).send({
         status: 404,
-        error: 'Party not found'
+        message: 'Party not found'
       });
     }
     data.push(party);
@@ -119,7 +119,7 @@ class Party {
     if (!party) {
       return res.status(404).send({
         status: 404,
-        error: 'Party not found'
+        message: 'Party not found'
       });
     }
     const updatedParty = partyModel.updateParty(req.params.id, req.body);
@@ -139,13 +139,13 @@ class Party {
     if (!party) {
       return res.status(404).send({
         status: 404,
-        error: 'Party not found'
+        message: 'Party not found'
       });
     }
     if (partyModel.deleteParty(req.params.id)) {
       return res.status(200).send({
         status: 200,
-        error: 'The Party deleted'
+        message: 'The Party deleted'
       });
     }
   }
